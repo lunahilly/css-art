@@ -1,0 +1,205 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --bodykleur: hsl(4, 37%, 40%);
+    --bellykleur: #d2ae9f;
+    --eyekleur: #A13333;
+    --eyelidkleur: #a2514b;
+    --beakkleur: linear-gradient(#F779A0, 50%, #F5598A);
+}
+
+body{
+    background: linear-gradient(#23d041, 50% , #19962f);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.hoothoot{
+    position: relative;
+}
+
+.hoothoot:hover > .hoothoot_eye > .hoothoot_eyelid{
+    transform: scaleY(0);
+}
+
+.hoothoot_body{
+    height: 415px;
+    width: 400px;
+    background: var(--bodykleur);
+    border-radius: 50%;
+    border: solid black 4px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hoothoot_belly{
+    width: 110%;
+    height: 100%;
+    background: var(--bellykleur);
+    border-radius: 50%;
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translateX(-50%);
+    filter: blur(1px);
+    border: solid black 1px;
+}
+
+.hoothoot_eye{
+    height: 170px;
+    width: 170px;
+    background: var(--eyekleur);
+    position: absolute;
+    border-radius: 50%;
+    top: 12%;
+    border: solid black 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.hoothoot_eye--left{
+    left: 9%;
+}
+
+.hoothoot_eye--right{
+    right: 9%;
+}
+
+.hoothoot_pupil{
+    height: 40px;
+    width: 40px;
+    background: black;
+    border-radius: 50%;
+}
+
+.hoothoot_eyelid{
+    height: 100%;
+    width: 100%;
+    background: var(--eyelidkleur);
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    transform: scaleY(1);
+    transition: 0.4s all;
+    transform-origin: top center;
+    border: solid black 3px;
+}
+
+.hoothoot_lash{
+    width: 30px;
+    position: absolute;
+    background: black;
+}
+
+.hoothoot_lash--first{
+    height: 50px;
+    top: 40%;
+    left: 10%;
+    transform: rotate(50deg);
+}
+
+.hoothoot_lash--second{
+    height: 55px;
+    left: 19%;
+    top: 48%;
+    transform: rotate(20deg);
+}
+
+.hoothoot_lash--third{
+    height: 50px;
+    left: 33%;
+    top: 45%;
+    transform: rotate(-20deg);
+}
+
+.hoothoot_lash--firstr{
+    height: 50px;
+    top: 40%;
+    right: 10%;
+    transform: rotate(-50deg);
+}
+
+.hoothoot_lash--secondr{
+    height: 55px;
+    right: 19%;
+    top: 48%;
+    transform: rotate(-20deg);
+}
+
+.hoothoot_lash--thirdr{
+    height: 50px;
+    right: 33%;
+    top: 45%;
+    transform: rotate(20deg);
+}
+
+.hoothoot_beak{
+    height: 90px;
+    width: 55px;
+    background: var(--beakkleur);
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    top: 33%;
+    transform: translateX(-50%);
+    z-index: 2;
+    border: solid black 5px;
+    overflow: hidden;
+}
+
+.hoothoot_lips{
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    border-left: solid black 5px;
+    border-bottom: solid black 5px;
+    transform: rotate(-45deg);
+    top: 5%;
+    left: -5%;
+}
+
+.hoothoot_eyebrow{
+    height: 190px;
+    width: 25px;
+    background: black;
+    position: absolute;
+    top: -11%;
+}
+
+.hoothoot_eyebrowl{
+    left: 35%;
+    transform: rotate(-45deg);
+}
+
+.hoothoot_eyebrowr{
+    right: 35%;
+    transform: rotate(45deg);
+}
+
+.hoothoot_pointer{
+    width: 110px;
+    height: 160px;
+    background: black;
+    position: absolute;
+    clip-path: polygon(50% 0%, 100% 80%, 60% 100%, 40% 100%, 0% 80%);
+    top: -35%;
+}
+
+.hoothoot_pointerl{
+    left: -7%;
+    transform: rotate(-50deg);
+}
+.hoothoot_pointerr{
+    right: -7%;
+    transform: rotate(50deg);
+}
